@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+
+}
+.banner
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: white;
+    transition: 0.5s;
+}
+.banner.night
+{
+    background: black;
+}
+header
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    width: 100%;
+}
+.logo
+{
+    color: black;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+header span
+{
+    color: #2196f3;
+}
+ul
+{
+    display: flex;
+    gap: 40px;
+}
+ul li
+{
+    list-style-type: none;
+}
+ul li a
+{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: black;
+    transition: 0.5s;
+}
+.content
+{
+    position: relative;
+    max-width: 700px;
+    z-index: 10;
+}
+.content h3
+{
+    font-size: 2em;
+    font-weight: 200;
+    color: black;
+    transition: 0.5s;
+
+}
+.content h2
+{
+    font-size: 5.5em;
+    font-weight: 700;
+    color: black;
+    transition: 0.5s;
+}
+.content h2 span
+{
+    color: #e91e63;
+}
+.content p
+{
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #666;
+    transition: 0.5s;
+}
+.content button
+{
+    font-size: 1.25em;
+    letter-spacing: 0.005em;
+    position: relative;
+    background: #2196f3;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    margin-right: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.wrapper
+{
+    width: 100%;
+    height: auto;
+}
+.gambar
+{
+    position: absolute;
+    max-width: 800px;
+    right: 0;
+    animation: animateColor 8s ease-in-out infinite;
+    
+}
+@keyframes animateColor
+{
+    0%,100%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(50px);
+    }
+}
+.rjs
+{
+    position: relative;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    animation: animateRjs 8s ease-in-out infinite;
+}
+@keyframes animateRjs
+{
+    0%,100%
+    {
+        transform: translateX(0px);
+    }
+    50%
+    {
+        transform: translateX(-50px);
+    }
+}
+.icon
+{
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    gap: 20px;
+    
+}
+.icon li a
+{
+    font-size: 1.75em;
+    color: black;
+}
+.icon .ig a:hover
+{
+    color: purple;
+}
+.icon .fb a:hover
+{
+    color: #2196f3;
+}
+.darkMode
+{
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f0f0f0;
+    color: #666;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.darkMode i:nth-child(2), .banner.night .darkMode i:nth-child(1)
+{
+    display: none;
+}
+.banner.night .darkMode
+{
+    background: #444;
+    color: white;
+}
+.banner.night header .logo,
+.banner.night header ul li a,
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night .icon li a
+{
+    color: white;
+}
+.banner.night .icon .ig a:hover
+{
+    color: purple;
+}
+.banner.night .icon .fb a:hover
+{
+    color: #2196f3;
+}
+.banner.night .darkMode i:nth-child(2)
+{
+    display: block;
+}
+
+
+
+@media (max-width: 500px) {
+    .rjs {
+        display: none;
+        
+    }
+    .gambar {
+        display: none;
+    }
+    .darkMode {
+        justify-content: center;
+        align-items: center;
+    }
+}
